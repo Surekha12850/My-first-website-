@@ -1,1 +1,70 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>first web page</title>
+</head>
+<body>
+    <h1 align="center">Software Engineering</h1>
+    <h2>Test Driven Development</h2>
+    <p>tests before writing the actual code, focusing on an iterative cycle of writing tests, seeing them fail, implementing code to pass the tests, and then refactoring.</p>
+    <h3>The TDD Cycle</h3>
+    <p> TDD follows a simple, iterative process known as the Red-Green-Refactor cycle:<br>
+ <b>Red: </b>Write a failing test for a specific functionality. <br>
+<b>Green: </b>Write the minimum code required to make the test pass. <br>
+<b>Refactor: </b>Improve the code's design while ensuring all tests still pass. This cycle is repeated for each new feature or functionality</p>
+<img src="" width ="200" height="200">
+<p> <b>Example of TDD: </b>A simple TDD example for a function that adds two numbers. <br>
+Step 1: Write a Failing Test (Red) 
+Start by writing a test for the sum method. Since the Calculator class doesn't exist yet, this test will fail when we run it.<br>
+
+ <b>CalculatorTest.java:</b><br>
+public class CalculatorTest<br>
+{<br>
+public static void main(String args[])<br>
+    { int x=10,y=2;<br>
+        Calculator c=new<br> Calculator();<br>
+if( c.sum (10,2)==12)<br>
+{<br>
+            System.out.println("test ok");<br>
+}<br>
+<b>Output:</b><br>
+Error<br>
+At this point, if you run the test, it will fail because the Calculator class and its sum method do not exist.<br>
+<b>Step 2: </b>Write the Code to Make the Test Pass (Green) 
+Next, implement the Calculator class with an sum method. The goal is to write just enough code to make the test pass. <br>
+<b>Calculator.java:</b><br>
+public class Calculator<br>
+{<br>
+    public int sum(int x,int y)<br
+{<br>
+return x+y; }<br>
+<b>Output:</b> test ok<br>
+Now, if you run the test, it should pass because the sum method correctly adds the two numbers.<br>
+<b>Step 1.1: Write a Failing Test (Red)</b> 
+Start by writing a test for the subtract method. Since the Calculator class doesn't exist yet, this test will fail when we run it.<br>
+<b>CalculatorTest.java:</b><br>
+ if( c.subtract(10,2)==8)<br>
+        {<br>
+System.out.println("test ok");<br>
+}<br>
+<b>Output:</b><br>
+Error<br>
+At this point, if you run the test, it will fail because the Calculator class and its  subtract method do not exist.<br>
+<b>Step 2.2: Write the Code to Make the Test Pass (Green) </b>
+Next, implement the Calculator class with an subtract method. The goal is to write just enough code to make the test pass. <br>
+<b>Calculator.java:</b><br>
+public class Calculator<br>
+{<br>
+    public int subtract (int x,int y)<br>
+{<br>
+return x-y; }<br>
+<b>Output: </b><br>
+test ok<br>
+Now, if you run the test, it should pass because the subtract method correctly subtracts the two numbers.<br>
+<b>Step 3: Refactor</b><br>
+Refactor the code to improve its design. For example, you might add input validation or optimize the logic. Ensure the test still passes after refactoring
+</p>
+</body>
+</html>
